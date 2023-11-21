@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>HuyaGPT</RootNamespace>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="HandyControl" Version="3.4.0" />
+      <PackageReference Include="MahApps.Metro" Version="3.0.0-alpha0457" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HuyaGPT.HuyaAPI\HuyaGPT.HuyaAPI.csproj" />
+      <ProjectReference Include="..\HuyaGPT.LMAPI\HuyaGPT.LMAPI.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,41 @@
+<UserControl x:Class="HuyaGPT.ChatContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:HuyaGPT"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             mc:Ignorable="d"
+             d:DesignHeight="100" d:DesignWidth="800">
+    <Border BorderThickness="0,0,0,0" Margin="0,3,0,3">
+        <Border.BorderBrush>
+            <SolidColorBrush Color="{DynamicResource InfoColor}"/>
+        </Border.BorderBrush>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="80"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Name="InfoPanel" HorizontalAlignment="Left">
+                <hc:Gravatar Name="Gravatar" Style="{StaticResource GravatarCircle}" MaxWidth="80" MaxHeight="80">
+                    <Viewbox>
+                        <Path Data="{StaticResource ChatGptIcon}" RenderTransformOrigin="0.5,0.5" Fill="White" >
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+                </hc:Gravatar>
+                <Label Name="UserName"></Label>
+            </StackPanel>
+            <hc:TransitioningContentControl Grid.Column="1" TransitionMode="Left2Right">
+                <TextBox IsReadOnly="True" Name="ChatText" SizeChanged="ChatText_OnSizeChanged" Text="dsaddadadd" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Left" VerticalContentAlignment="Top"/>
+            </hc:TransitioningContentControl>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,19 @@
+<local:AutoSizablePage x:Class="HuyaGPT.ConfigPage"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                       xmlns:local="clr-namespace:HuyaGPT"
+                       xmlns:hc="https://handyorg.github.io/handycontrol"
+                       mc:Ignorable="d"
+                       DataContext="{Binding RelativeSource={RelativeSource Self}}"
+                       Title="ConfigPage" Height="450" Width="800">
+    <Grid Name="Panel">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <hc:PropertyGrid Grid.Row="0" Name="PropertyGrid" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        
+    </Grid>
+</local:AutoSizablePage>
